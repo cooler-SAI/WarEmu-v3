@@ -1,0 +1,180 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="4.0">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.30729</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{9A524C41-EA0F-4F4F-B9B5-318C6F3C2B54}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>EasyMYP</RootNamespace>
+    <AssemblyName>EasyMYP</AssemblyName>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+    <OldToolsVersion>3.5</OldToolsVersion>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <ApplicationIcon>EasyMYP.ico</ApplicationIcon>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.configuration" />
+    <Reference Include="System.Core">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="About.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="About.Designer.cs">
+      <DependentUpon>About.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AvancementBar.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AvancementBar.Designer.cs">
+      <DependentUpon>AvancementBar.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Configuration.cs" />
+    <Compile Include="DictionnaryStatistics.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DictionnaryStatistics.Designer.cs">
+      <DependentUpon>DictionnaryStatistics.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FileTester.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FileTester.Designer.cs">
+      <DependentUpon>FileTester.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FindStrip.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="ItemFoundEventArgs.cs" />
+    <Compile Include="ItemFoundEventHandler.cs" />
+    <Compile Include="MainWindow.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MainWindow.Designer.cs">
+      <DependentUpon>MainWindow.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MainWindow_Delegates_Events.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MySettings.cs" />
+    <Compile Include="Preferences.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Preferences.Designer.cs">
+      <DependentUpon>Preferences.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="About.resx">
+      <DependentUpon>About.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AvancementBar.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>AvancementBar.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DictionnaryStatistics.resx">
+      <DependentUpon>DictionnaryStatistics.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="EasyMYP.ico" />
+    <EmbeddedResource Include="FileTester.resx">
+      <DependentUpon>FileTester.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FindStrip.resx">
+      <DependentUpon>FindStrip.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MainWindow.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>MainWindow.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Preferences.resx">
+      <DependentUpon>Preferences.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <None Include="Properties\DataSources\MYPWorker.FileInArchive.datasource" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="SearchableSortableBindingList.cs" />
+    <Compile Include="TreeViewManager.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\HashCreator\HashCreator.csproj">
+      <Project>{136F8DE7-A1ED-4B3D-844D-A72B9D8F753D}</Project>
+      <Name>HashCreator</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\HashDictionary\HashDictionary.csproj">
+      <Project>{7D3858A9-1902-46B0-A121-C8B2F18806ED}</Project>
+      <Name>HashDictionary</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\HasherFunctions\HasherFunctions.csproj">
+      <Project>{9DC94530-A111-4FF7-B88F-BD9A8AC3E035}</Project>
+      <Name>HasherFunctions</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\MYPHandler\MYPHandler.csproj">
+      <Project>{9668509D-05D9-4651-8E4F-4142AF541AB2}</Project>
+      <Name>MYPHandler</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="README.txt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Hash\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
